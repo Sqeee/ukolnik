@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC65216C-E1B0-485E-B1A2-D8571E46C7E9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ukolnik</RootNamespace>
+    <AssemblyName>Ukolnik</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>ftp://sqee.eu/sqee.eu/programy/ukolnik/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://sqee.eu/programy/ukolnik/</InstallUrl>
+    <SupportUrl>http://sqee.eu/</SupportUrl>
+    <ProductName>Úkolník</ProductName>
+    <PublisherName>SqeeHead</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <DisallowUrlActivation>true</DisallowUrlActivation>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.3.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Ukolnik.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E996ADA00CC40422E467B3610EB445465000BA0F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Obrazky\diar.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <ErrorReport>prompt</ErrorReport>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=6.9.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alarm.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Alarm.Designer.cs">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aktualizace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aktualizace.Designer.cs">
+      <DependentUpon>Aktualizace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formular.Designer.cs">
+      <DependentUpon>Formular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HlavniOkno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HlavniOkno.Designer.cs">
+      <DependentUpon>HlavniOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nastaveni.cs" />
+    <Compile Include="NastavovaciOkno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NastavovaciOkno.Designer.cs">
+      <DependentUpon>NastavovaciOkno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OUkolniku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OUkolniku.Designer.cs">
+      <DependentUpon>OUkolniku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxSplneno.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PictureBoxSplneno.Designer.cs">
+      <DependentUpon>PictureBoxSplneno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PictureBoxUprava.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PictureBoxUprava.Designer.cs">
+      <DependentUpon>PictureBoxUprava.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Podrobnosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Podrobnosti.Designer.cs">
+      <DependentUpon>Podrobnosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Prehled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prehled.Designer.cs">
+      <DependentUpon>Prehled.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StareUdalosti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StareUdalosti.Designer.cs">
+      <DependentUpon>StareUdalosti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stranka.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stranka.Designer.cs">
+      <DependentUpon>Stranka.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Svatky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Svatky.Designer.cs">
+      <DependentUpon>Svatky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tridy.cs" />
+    <Compile Include="Upozorneni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upozorneni.Designer.cs">
+      <DependentUpon>Upozorneni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Uprava.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Uprava.Designer.cs">
+      <DependentUpon>Uprava.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alarm.resx">
+      <DependentUpon>Alarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aktualizace.resx">
+      <DependentUpon>Aktualizace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formular.resx">
+      <DependentUpon>Formular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HlavniOkno.resx">
+      <DependentUpon>HlavniOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NastavovaciOkno.resx">
+      <DependentUpon>NastavovaciOkno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUkolniku.resx">
+      <DependentUpon>OUkolniku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxSplneno.resx">
+      <DependentUpon>PictureBoxSplneno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PictureBoxUprava.resx">
+      <DependentUpon>PictureBoxUprava.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Podrobnosti.resx">
+      <DependentUpon>Podrobnosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prehled.resx">
+      <DependentUpon>Prehled.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StareUdalosti.resx">
+      <DependentUpon>StareUdalosti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stranka.resx">
+      <DependentUpon>Stranka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Svatky.resx">
+      <DependentUpon>Svatky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upozorneni.resx">
+      <DependentUpon>Upozorneni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Uprava.resx">
+      <DependentUpon>Uprava.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="SqeeHeadPFX.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Databaze\create.sql" />
+    <None Include="Databaze\MySql.Data.dll" />
+    <Content Include="Databaze\svatky.sql" />
+    <Content Include="Databaze\vyznamne_dny.sql" />
+    <Content Include="Obrazky\diar.ico" />
+    <Content Include="Obrazky\fajfka.png" />
+    <Content Include="Obrazky\krizek.png" />
+    <None Include="Obrazky\tuzka.png" />
+    <None Include="Zvuky\aoogah.wav" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
